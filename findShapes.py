@@ -15,6 +15,7 @@ ret, thresh = cv2.threshold(gray, 127, 255, 1)
 cv2.imshow("Threshold Image", thresh)
 cv2.waitKey(0)
 
+#data mapping
 _, contours, hierarchy = cv2.findContours(thresh.copy(), cv2.RETR_LIST, cv2.CHAIN_APPROX_NONE)
 print ('Number of contours', str(len(contours)))
 print (contours[0].shape)
